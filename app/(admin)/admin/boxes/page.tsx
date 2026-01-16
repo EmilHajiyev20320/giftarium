@@ -26,6 +26,7 @@ interface PreMadeBox {
 interface Product {
   id: string
   name: string
+  description: string | null
   price: number
 }
 
