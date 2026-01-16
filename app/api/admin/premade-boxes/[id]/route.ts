@@ -4,7 +4,7 @@ import { db } from '@/src/lib/db'
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const session = await auth()
@@ -13,12 +13,13 @@ export async function PUT(
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
+    const { id } = await params
     const body = await request.json()
     const { name, description, price, image, images, isActive, items } = body
 
     // Update box
     const box = await db.preMadeBox.update({
-      where: { id: params.id },
+      where: { id },
       data: {
         name,
         description,
@@ -33,14 +34,14 @@ export async function PUT(
     if (items) {
       // Delete existing items
       await db.preMadeBoxItem.deleteMany({
-        where: { premadeBoxId: params.id },
+        where: { premadeBoxId: id },
       })
 
       // Create new items
       if (items.length > 0) {
         await db.preMadeBoxItem.createMany({
           data: items.map((item: { productId: string; quantity: number }) => ({
-            premadeBoxId: params.id,
+            premadeBoxId: id,
             productId: item.productId,
             quantity: item.quantity || 1,
           })),
@@ -49,7 +50,7 @@ export async function PUT(
     }
 
     const updatedBox = await db.preMadeBox.findUnique({
-      where: { id: params.id },
+      where: { id },
       include: {
         items: {
           include: {
@@ -71,7 +72,7 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const session = await auth()
@@ -80,9 +81,10 @@ export async function DELETE(
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
+    const { id } = await params
     // Soft delete by setting isActive to false
     await db.preMadeBox.update({
-      where: { id: params.id },
+      where: { id },
       data: { isActive: false },
     })
 

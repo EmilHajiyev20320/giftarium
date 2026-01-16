@@ -5,7 +5,7 @@ import { OrderDetails } from '@/src/components/orders/order-details'
 export default async function OrderDetailsPage({
   params,
 }: {
-  params: { id: string }
+  params: Promise<{ id: string }>
 }) {
   const session = await auth()
   
@@ -13,9 +13,11 @@ export default async function OrderDetailsPage({
     redirect('/login')
   }
 
+  const { id } = await params
+
   return (
     <div className="container mx-auto px-4 py-8">
-      <OrderDetails orderId={params.id} userId={session.user.id} />
+      <OrderDetails orderId={id} userId={session.user.id} />
     </div>
   )
 }

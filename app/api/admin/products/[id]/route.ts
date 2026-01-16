@@ -5,7 +5,7 @@ import { ProductCategory } from '@prisma/client'
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const session = await auth()
@@ -14,6 +14,7 @@ export async function PUT(
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
+    const { id } = await params
     let body
     try {
       body = await request.json()
@@ -43,7 +44,7 @@ export async function PUT(
     }
 
     const product = await db.product.update({
-      where: { id: params.id },
+      where: { id },
       data: {
         name: String(name),
         description: description || null,
@@ -68,7 +69,7 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const session = await auth()
@@ -77,9 +78,10 @@ export async function DELETE(
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
+    const { id } = await params
     // Hard delete - completely remove from database
     await db.product.delete({
-      where: { id: params.id },
+      where: { id },
     })
 
     return NextResponse.json({ success: true })

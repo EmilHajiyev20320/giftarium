@@ -3,11 +3,12 @@ import { db } from '@/src/lib/db'
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params
     const box = await db.preMadeBox.findUnique({
-      where: { id: params.id },
+      where: { id },
       include: {
         items: {
           include: {
