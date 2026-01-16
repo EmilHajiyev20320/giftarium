@@ -33,8 +33,12 @@ export function OrderDetails({ orderId, userId }: OrderDetailsProps) {
     items: OrderItem[]
     delivery?: {
       address: string
-      city: string
+      city?: string
       status: string
+      trackingNumber?: string | null
+      fullName?: string | null
+      phone?: string | null
+      email?: string | null
     } | null
     paymentStatus?: string | null
     payment?: {

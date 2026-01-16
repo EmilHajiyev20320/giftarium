@@ -104,6 +104,7 @@ export async function POST(request: NextRequest) {
     let mysteryBoxData: {
       recipientGender?: string | null
       recipientAge?: number | null
+      recipientOccasion?: string | null
       recipientInterests?: string | null
       recipientComments?: string | null
     } = {}

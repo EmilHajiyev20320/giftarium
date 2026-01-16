@@ -1,5 +1,7 @@
 import { MysteryBoxForm } from '@/src/components/mystery-box/mystery-box-form'
 
+export const dynamic = 'force-dynamic'
+
 export default function MysteryBoxPage() {
   return (
     <div className="bg-cosmic-gradient min-h-screen relative overflow-hidden">

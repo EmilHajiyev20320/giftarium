@@ -19,7 +19,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   },
   pages: {
     signIn: '/login',
-    signUp: '/register',
   },
   providers: [
     // Only add Google provider if credentials are configured
@@ -66,7 +65,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       // When user first signs in
       if (user) {
         token.id = user.id
-        token.role = user.role
+        token.role = (user as any).role
       }
       
       // Always fetch the latest role from database to ensure it's up to date
@@ -89,7 +88,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     async session({ session, token }) {
       if (session.user && token) {
         session.user.id = token.id as string
-        session.user.role = (token.role as string) || null
+        session.user.role = (token.role as string) || undefined
       }
       return session
     },

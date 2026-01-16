@@ -42,14 +42,7 @@ export async function GET(request: NextRequest) {
     }
 
     // Build where clause with proper typing
-    const where: {
-      isActive: boolean
-      category?: string
-      OR?: Array<{
-        name?: { contains: string; mode: 'insensitive' }
-        description?: { contains: string; mode: 'insensitive' }
-      }>
-    } = {
+    const where: any = {
       isActive: true,
     }
 
@@ -62,7 +55,7 @@ export async function GET(request: NextRequest) {
           { status: 400 }
         )
       }
-      where.category = category
+      where.category = category as any
     }
 
     if (search && search.trim().length > 0) {

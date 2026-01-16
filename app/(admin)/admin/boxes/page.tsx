@@ -28,6 +28,11 @@ interface Product {
   name: string
   description: string | null
   price: number
+  image: string | null
+  images: string[]
+  category: string
+  stock: number
+  isActive: boolean
 }
 
 export default function AdminBoxesPage() {

@@ -1,5 +1,7 @@
 import { CustomBoxBuilder } from '@/src/components/custom-box/custom-box-builder'
 
+export const dynamic = 'force-dynamic'
+
 export default function CustomBoxPage() {
   return (
     <div className="bg-cosmic-gradient min-h-screen relative overflow-hidden">

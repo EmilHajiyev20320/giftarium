@@ -1,5 +1,7 @@
 import { ContactForm } from '@/src/components/contact/contact-form'
 
+export const dynamic = 'force-dynamic'
+
 export default function ContactPage() {
   return (
     <div className="bg-cosmic-gradient min-h-screen relative overflow-hidden">

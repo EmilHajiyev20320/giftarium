@@ -208,7 +208,7 @@ export function CustomBoxBuilder() {
                           onClick={(e) => {
                             e.preventDefault()
                             e.stopPropagation()
-                            if (window.confirm(t('yourBox.removeConfirm', { name: item.name }))) {
+                            if (window.confirm(t('yourBox.removeConfirm', { name: item.name || 'item' }))) {
                               removeItem(item.productId)
                             }
                           }}
