@@ -7,7 +7,7 @@ import { Button } from '@/src/components/ui/button'
 export default async function AdminOrdersPage({
   searchParams,
 }: {
-  searchParams: Promise<{ page?: string; limit?: string }> | { page?: string; limit?: string }
+  searchParams: Promise<{ page?: string; limit?: string }>
 }) {
   const session = await auth()
 
@@ -15,7 +15,7 @@ export default async function AdminOrdersPage({
     redirect('/login?redirect=/admin')
   }
 
-  const params = searchParams instanceof Promise ? await searchParams : searchParams
+  const params = await searchParams
   const page = parseInt(params?.page || '1', 10)
   const limit = parseInt(params?.limit || '20', 10)
   const skip = (page - 1) * limit
