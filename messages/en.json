@@ -1,0 +1,360 @@
+{
+  "common": {
+    "welcome": "Welcome to Giftarium",
+    "home": "Home",
+    "products": "Products",
+    "premadeBoxes": "Pre-Made Boxes",
+    "customBox": "Custom Box",
+    "mysteryBox": "Mystery Box",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "cart": "Cart",
+    "orders": "Orders",
+    "profile": "Profile",
+    "checkout": "Checkout",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "remove": "Remove",
+    "search": "Search",
+    "filter": "Filter",
+    "price": "Price",
+    "quantity": "Quantity",
+    "total": "Total",
+    "continue": "Continue",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  },
+  "home": {
+    "title": "Welcome to Giftarium",
+    "subtitle": "This is a place where gifts are curated with care, aesthetics, and a touch of magic. Here, you can choose a ready-made box, build your own, or let us create a personalized surprise for you. We thoughtfully select every item, pack everything beautifully, and deliver it with care — turning a simple gift into a warm and memorable moment.",
+    "browseBoxes": "Browse Pre-Made Boxes",
+    "buildCustom": "Build Custom Box",
+    "mysteryBox": "Mystery Box",
+    "features": {
+      "title": "How It Works",
+      "subtitle": "Choose the perfect way to create a memorable gift experience",
+      "premade": {
+        "title": "Pre-Made Boxes",
+        "description": "Browse our curated collection of ready-made gift boxes for every occasion.",
+        "cta": "Explore"
+      },
+      "custom": {
+        "title": "Custom Builder",
+        "description": "Pick individual products and create your perfect gift box.",
+        "cta": "Start Building"
+      },
+      "mystery": {
+        "title": "Mystery Box",
+        "description": "Let us surprise you! Tell us about the recipient and we'll create a special box.",
+        "cta": "Create Surprise"
+      }
+    },
+    "featured": {
+      "title": "Featured Gift Boxes",
+      "subtitle": "Handpicked collections for special moments",
+      "forHer": {
+        "title": "For Her",
+        "description": "Elegant collections perfect for the special women in your life"
+      },
+      "birthday": {
+        "title": "Birthday Special",
+        "description": "Make their special day even more memorable"
+      },
+      "holiday": {
+        "title": "Holiday Collection",
+        "description": "Festive boxes for the holiday season"
+      },
+      "cta": "Shop Now →"
+    },
+    "whyChoose": {
+      "title": "Why Choose Giftarium?",
+      "subtitle": "Experience the magic of thoughtful gifting",
+      "delivery": {
+        "title": "Fast Delivery",
+        "description": "Quick and reliable shipping"
+      },
+      "personalized": {
+        "title": "Personalized",
+        "description": "Every box is unique"
+      },
+      "quality": {
+        "title": "Premium Quality",
+        "description": "Carefully selected items"
+      },
+      "perfect": {
+        "title": "Perfect Gifts",
+        "description": "For every occasion"
+      }
+    }
+  },
+  "checkout": {
+    "title": "Personal Information",
+    "description": "Please provide your contact details. We'll contact you via WhatsApp for payment confirmation.",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phone": "Phone Number (WhatsApp)",
+    "phoneHint": "Please provide a phone number with active WhatsApp. We'll contact you via WhatsApp for payment.",
+    "address": "Address",
+    "placeType": "Place Type",
+    "placeTypeOptions": {
+      "select": "Select place type (optional)",
+      "apartment": "Apartment",
+      "house": "House",
+      "office": "Office",
+      "other": "Other"
+    },
+    "submitOrder": "Submit Order",
+    "submitting": "Submitting Order...",
+    "afterSubmit": "After submitting, we'll contact you via WhatsApp to complete the payment.",
+    "loading": "Loading...",
+    "success": {
+      "title": "Order Received!",
+      "description": "Your order has been successfully placed. We'll contact you via WhatsApp shortly to confirm payment details.",
+      "paymentReceived": "Your payment has been received and your order is being processed.",
+      "loading": "Loading order details...",
+      "whatsappPayment": {
+        "title": "WhatsApp Payment",
+        "description": "Please keep your WhatsApp active. Our team will contact you on the phone number you provided to complete the payment process."
+      },
+      "orderSummary": {
+        "title": "Order Summary",
+        "orderId": "Order ID",
+        "totalAmount": "Total Amount",
+        "paymentStatus": "Payment Status",
+        "paymentStatuses": {
+          "pending": "PENDING",
+          "paid": "PAID",
+          "failed": "FAILED",
+          "cancelled": "CANCELLED",
+          "refunded": "REFUNDED"
+        }
+      },
+      "whatsappContact": "We'll contact you via WhatsApp shortly to complete the payment.",
+      "emailConfirmation": "We're processing your payment. You'll receive a confirmation email shortly.",
+      "whatsappContactDetails": "Our team will contact you via WhatsApp on the phone number you provided to complete the payment and confirm your order details.",
+      "whatHappensNext": {
+        "title": "What happens next?",
+        "step1": "We'll send you a WhatsApp message within a few minutes",
+        "step2": "You'll receive payment instructions and order confirmation",
+        "step3": "Once payment is confirmed, we'll start preparing your order"
+      },
+      "emailShipping": "We'll send you an email confirmation once your order is ready to ship.",
+      "viewOrderDetails": "View Order Details",
+      "continueShopping": "Continue Shopping"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Have a question or need help? We're here to assist you. Send us a message and we'll get back to you as soon as possible.",
+    "name": "Name",
+    "subject": "Subject",
+    "category": "Category",
+    "message": "Message",
+    "send": "Send Message"
+  },
+  "premadeBoxes": {
+    "title": "Pre-Made Gift Boxes",
+    "description": "Browse our curated collection of ready-made gift boxes for every occasion."
+  },
+  "customBox": {
+    "title": "Build Your Custom Box"
+  },
+  "mysteryBox": {
+    "title": "Mystery Gift Box",
+    "description": "Tell us about the recipient and we'll create a special surprise gift box tailored to them."
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "createAccount": "Create Account",
+    "loading": "Loading..."
+  },
+  "footer": {
+    "description": "Your one-stop shop for personalized gift boxes.",
+    "shop": "Shop",
+    "account": "Account",
+    "support": "Support"
+  },
+  "customBox": {
+    "title": "Build Your Custom Box",
+    "steps": {
+      "products": "Products",
+      "postcard": "Postcard",
+      "boxType": "Box Type"
+    },
+    "selectProducts": {
+      "title": "Select Products",
+      "description": "Choose products for your custom gift box."
+    },
+    "yourBox": {
+      "title": "Your Box",
+      "empty": "Add products to your box!",
+      "remove": "Remove",
+      "removeConfirm": "Remove {name} from your box?",
+      "total": "Total:",
+      "postcardQuestion": "Would you like to add a personal postcard message?",
+      "yesAddPostcard": "Yes, Add Postcard",
+      "noSkip": "No, Skip to Checkout",
+      "clearBox": "Clear Box",
+      "changeBox": "Change box",
+      "proceedToCheckout": "Proceed to Checkout"
+    },
+    "postcard": {
+      "title": "Add a Personal Postcard (Optional)",
+      "description": "Write a personal message to include with your gift box. This is optional - you can skip this step.",
+      "label": "Your Message",
+      "placeholder": "Write your personal message here...",
+      "characters": "{count}/500 characters",
+      "skip": "Skip Postcard",
+      "save": "Save & Continue to Checkout",
+      "tip": "Adding a personal message makes your gift extra special!",
+      "back": "← Back to Products"
+    },
+    "boxType": {
+      "title": "Choose Your Box Type",
+      "description": "Select the perfect box size for your {count} item{plural}. Each box has a maximum capacity.",
+      "recommendation": {
+        "title": "✨ Let Giftarium Choose for You",
+        "recommends": "We recommend: {name} (Capacity: {capacity} items)",
+        "chooseRecommended": "Choose Recommended",
+        "selected": "Selected"
+      },
+      "back": "← Back to Postcard",
+      "size": "Size",
+      "price": "Price",
+      "capacity": "Capacity",
+      "item": "item",
+      "items": "items",
+      "tooSmall": "Too small",
+      "perfectFit": "Perfect fit",
+      "recommended": "Recommended",
+      "selectBox": "Select Box",
+      "selected": "Selected"
+    }
+  },
+  "mysteryBox": {
+    "title": "Mystery Gift Box",
+    "description": "Tell us about the recipient and we'll create a special surprise gift box tailored to them.",
+    "form": {
+      "recipientGender": "Recipient Gender",
+      "recipientAge": "Recipient Age",
+      "budget": "Budget (AZN)",
+      "occasion": "Occasion (optional)",
+      "interests": "Interests (select all that apply)",
+      "additionalComments": "Additional Comments (optional)",
+      "placeholder": "Any special requests or preferences...",
+      "customOccasionPlaceholder": "Enter your custom occasion...",
+      "submit": "Create Mystery Box",
+      "submitting": "Creating Mystery Box...",
+      "genders": {
+        "male": "Male",
+        "female": "Female",
+        "other": "Other"
+      },
+      "occasionsList": {
+        "birthday": "Birthday",
+        "anniversary": "Anniversary",
+        "valentines": "Valentine's Day",
+        "wedding": "Wedding",
+        "graduation": "Graduation",
+        "newBaby": "New Baby",
+        "thankYou": "Thank You",
+        "getWell": "Get Well Soon",
+        "congratulations": "Congratulations",
+        "christmas": "Christmas",
+        "justBecause": "Just Because",
+        "custom": "Custom Occasion"
+      },
+      "interestsList": {
+        "sports": "Sports",
+        "music": "Music",
+        "reading": "Reading",
+        "gaming": "Gaming",
+        "art": "Art",
+        "technology": "Technology",
+        "fashion": "Fashion",
+        "cooking": "Cooking",
+        "travel": "Travel",
+        "movies": "Movies",
+        "photography": "Photography",
+        "fitness": "Fitness"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Have a question or need help? We're here to assist you. Send us a message and we'll get back to you as soon as possible.",
+    "form": {
+      "title": "Send us a Message",
+      "name": "Name",
+      "email": "Email",
+      "category": "Category",
+      "subject": "Subject",
+      "orderId": "Order ID / Order Code",
+      "message": "Message",
+      "agreeToContact": "I agree to be contacted by email regarding this inquiry",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "prefilled": "Pre-filled from your account",
+      "optionalRecommended": "Optional but recommended",
+      "optionalOrder": "Optional - include if your message is about a specific order",
+      "messagePlaceholder": "Please provide details about your inquiry (minimum 20 characters)",
+      "subjectPlaceholder": "Brief description of your inquiry",
+      "orderIdPlaceholder": "If your inquiry is about a specific order",
+      "characters": "{count} / 5000 characters",
+      "validation": {
+        "nameRequired": "Name is required",
+        "nameMinLength": "Name must be at least 2 characters",
+        "nameMaxLength": "Name must be less than 100 characters",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email address",
+        "subjectMaxLength": "Subject must be less than 200 characters",
+        "messageRequired": "Message is required",
+        "messageMinLength": "Message must be at least 20 characters",
+        "messageMaxLength": "Message must be less than 5000 characters"
+      },
+      "categories": {
+        "website": "Website Issue",
+        "order": "Order Problem",
+        "boxRequest": "Box Request / Idea",
+        "payment": "Payment",
+        "delivery": "Delivery",
+        "other": "Other"
+      }
+    },
+    "success": {
+      "title": "Thank You!",
+      "message": "Your message has been received — we'll get back to you via email.",
+      "sendAnother": "Send Another Message"
+    }
+  },
+  "products": {
+    "search": {
+      "placeholder": "Search products by name or description...",
+      "button": "Search"
+    },
+    "filters": {
+      "title": "Filters",
+      "category": "Category",
+      "allCategories": "All Categories",
+      "categories": {
+        "toys": "Toys",
+        "accessories": "Accessories",
+        "cosmetics": "Cosmetics",
+        "sweets": "Sweets",
+        "hygiene": "Hygiene",
+        "other": "Other"
+      }
+    }
+  }
+}
+

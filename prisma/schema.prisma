@@ -1,0 +1,297 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum OrderType {
+  PREMADE
+  CUSTOM
+  MYSTERY
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  FAILED
+  CANCELLED
+  REFUNDED
+}
+
+enum PaymentProvider {
+  WHATSAPP
+}
+
+enum DeliveryStatus {
+  PENDING
+  IN_TRANSIT
+  OUT_FOR_DELIVERY
+  DELIVERED
+  FAILED
+}
+
+enum ProductCategory {
+  TOYS
+  ACCESSORIES
+  COSMETICS
+  SWEETS
+  HYGIENE
+  OTHER
+}
+
+enum UserRole {
+  USER
+  ADMIN
+}
+
+enum ContactStatus {
+  NEW
+  IN_PROGRESS
+  RESOLVED
+  CLOSED
+}
+
+enum ContactCategory {
+  WEBSITE
+  ORDER
+  BOX_REQUEST
+  PAYMENT
+  DELIVERY
+  OTHER
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  emailVerified DateTime?
+  name          String?
+  image         String?
+  password      String? // Hashed password for email/password auth
+  role          UserRole  @default(USER)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  accounts      Account[]
+  sessions      Session[]
+  orders        Order[]
+  contactMessages ContactMessage[]
+  handledMessages ContactMessage[] @relation("HandledBy")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Product {
+  id              String           @id @default(cuid())
+  name            String
+  description     String?          @db.Text
+  price           Float
+  image           String?
+  images          String[] // Array of image URLs
+  category        ProductCategory
+  stock           Int              @default(0)
+  isActive        Boolean          @default(true)
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  orderItems      OrderItem[]
+  premadeBoxItems PreMadeBoxItem[]
+
+  @@index([category, isActive])
+  @@index([isActive, createdAt])
+  @@index([name])
+}
+
+model PreMadeBox {
+  id          String           @id @default(cuid())
+  name        String
+  description String?          @db.Text
+  price       Float
+  image       String?
+  images      String[] // Array of image URLs
+  isActive    Boolean          @default(true)
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+  items       PreMadeBoxItem[]
+  orders      Order[]
+
+  @@index([isActive, createdAt])
+}
+
+model BoxType {
+  id          String   @id @default(cuid())
+  name        String
+  description String?  @db.Text
+  price       Float
+  size        String // e.g., "Small (20x15x10 cm)", "Medium (30x20x15 cm)", "Large (40x30x20 cm)"
+  capacity    Int // Maximum number of items this box can hold
+  image       String?
+  images      String[] // Array of image URLs
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  orders      Order[]
+}
+
+model PreMadeBoxItem {
+  id           String     @id @default(cuid())
+  premadeBoxId String
+  productId    String
+  quantity     Int        @default(1)
+  premadeBox   PreMadeBox @relation(fields: [premadeBoxId], references: [id], onDelete: Cascade)
+  product      Product    @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@unique([premadeBoxId, productId])
+}
+
+model Order {
+  id           String      @id @default(cuid())
+  userId       String?
+  orderType    OrderType
+  status       OrderStatus @default(PENDING)
+  totalAmount  Float
+  subtotal     Float
+  tax          Float?      @default(0)
+  shippingCost Float?      @default(0)
+  paymentStatus PaymentStatus? // Payment status for quick lookup
+
+  // Pre-made box reference (for PREMADE orders)
+  premadeBoxId String?
+
+  // Custom box specific fields
+  boxTypeId    String?
+  postcardText String? @db.Text
+
+  // Mystery box specific fields
+  recipientGender    String?
+  recipientAge       Int?
+  recipientOccasion  String?
+  recipientInterests String? @db.Text
+  recipientComments  String? @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user       User?       @relation(fields: [userId], references: [id], onDelete: SetNull)
+  premadeBox PreMadeBox? @relation(fields: [premadeBoxId], references: [id], onDelete: SetNull)
+  boxType    BoxType?    @relation(fields: [boxTypeId], references: [id], onDelete: SetNull)
+  items      OrderItem[]
+  payment    Payment?
+  delivery   Delivery?
+
+  @@index([userId, createdAt])
+  @@index([status, createdAt])
+  @@index([orderType, createdAt])
+}
+
+model OrderItem {
+  id        String   @id @default(cuid())
+  orderId   String
+  productId String?
+  quantity  Int
+  price     Float // Price at time of order
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product   Product? @relation(fields: [productId], references: [id], onDelete: SetNull)
+
+  // For custom boxes, productId will be set
+  // For premade boxes, productId may be null (box is the item)
+  // For mystery boxes, productId may be null until box is assembled
+}
+
+model Payment {
+  id                    String          @id @default(cuid())
+  orderId               String          @unique
+  amount                Decimal         @db.Decimal(10, 2)
+  currency              String          @default("AZN")
+  status                PaymentStatus   @default(PENDING)
+  provider              PaymentProvider @default(WHATSAPP)
+  providerRef           String? // Session ID or transaction ID from provider
+  metadata              Json? // Additional payment data
+  createdAt             DateTime        @default(now())
+  updatedAt             DateTime        @updatedAt
+  order                 Order           @relation(fields: [orderId], references: [id], onDelete: Cascade)
+}
+
+model Delivery {
+  id                String         @id @default(cuid())
+  orderId           String         @unique
+  status            DeliveryStatus @default(PENDING)
+  fullName          String?
+  email             String?
+  phone             String?
+  address           String         @db.Text
+  placeType         String?        // apartment, house, office, etc.
+  country           String         @default("Azerbaijan")
+  courierName       String?
+  courierPhone      String?
+  trackingNumber    String?
+  estimatedDelivery DateTime?
+  deliveredAt       DateTime?
+  createdAt         DateTime       @default(now())
+  updatedAt         DateTime       @updatedAt
+  order             Order          @relation(fields: [orderId], references: [id], onDelete: Cascade)
+}
+
+model ContactMessage {
+  id          String          @id @default(cuid())
+  userId      String?
+  name        String
+  email       String
+  subject     String?
+  category    ContactCategory @default(OTHER)
+  orderId     String?
+  message     String          @db.Text
+  status      ContactStatus   @default(NEW)
+  adminNote   String?         @db.Text
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+  handledById String?
+  
+  user        User?           @relation(fields: [userId], references: [id], onDelete: SetNull)
+  handledBy   User?           @relation("HandledBy", fields: [handledById], references: [id], onDelete: SetNull)
+}

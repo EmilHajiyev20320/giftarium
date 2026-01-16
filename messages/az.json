@@ -1,0 +1,344 @@
+{
+  "common": {
+    "welcome": "Giftarium-a xoş gəlmisiniz",
+    "home": "Ana səhifə",
+    "products": "Məhsullar",
+    "premadeBoxes": "Hazır qutular",
+    "customBox": "Fərdi qutu",
+    "mysteryBox": "Sürpriz qutu",
+    "contact": "Əlaqə",
+    "login": "Daxil ol",
+    "register": "Qeydiyyat",
+    "logout": "Çıxış",
+    "cart": "Səbət",
+    "orders": "Sifarişlər",
+    "profile": "Profil",
+    "checkout": "Ödəniş",
+    "submit": "Göndər",
+    "cancel": "Ləğv et",
+    "save": "Saxla",
+    "delete": "Sil",
+    "edit": "Redaktə et",
+    "add": "Əlavə et",
+    "remove": "Sil",
+    "search": "Axtar",
+    "filter": "Filtrlə",
+    "price": "Qiymət",
+    "quantity": "Miqdar",
+    "total": "Cəmi",
+    "continue": "Davam et",
+    "back": "Geri",
+    "next": "Növbəti",
+    "previous": "Əvvəlki",
+    "loading": "Yüklənir...",
+    "error": "Xəta",
+    "success": "Uğurlu"
+  },
+  "home": {
+    "title": "Giftarium-a xoş gəlmisiniz",
+    "subtitle": "Burada hədiyyələr zövqlə, diqqətlə və bir az sehr qatılaraq hazırlanır. Hazır boks seçə, öz qutunuzu yarada və ya fərdi sürprizin hazırlanmasını bizə etibar edə bilərsiniz. Biz hər bir detalı incəliklə seçir, estetik şəkildə qablaşdırır və çatdırırıq ki, adi bir hədiyyə belə isti və yaddaqalan bir ana çevrilsin.",
+    "browseBoxes": "Hazır qutulara bax",
+    "buildCustom": "Fərdi qutu yarat",
+    "mysteryBox": "Sirr qutusu",
+    "features": {
+      "title": "Necə işləyir",
+      "subtitle": "Unudulmaz hədiyyə təcrübəsi yaratmaq üçün mükəmməl yolu seçin",
+      "premade": {
+        "title": "Hazır qutular",
+        "description": "Hər tədbir üçün hazırlanmış hədiyyə qutularımızın seçilmiş kolleksiyasına baxın.",
+        "cta": "Kəşf et"
+      },
+      "custom": {
+        "title": "Fərdi qurucu",
+        "description": "Fərdi məhsulları seçin və mükəmməl hədiyyə qutunuzu yaradın.",
+        "cta": "Yaratmağa başla"
+      },
+      "mystery": {
+        "title": "Sirr qutusu",
+        "description": "Bizi sürpriz edin! Alıcı haqqında bizə məlumat verin və biz xüsusi bir qutu yaradacağıq.",
+        "cta": "Sürpriz yarat"
+      }
+    },
+    "featured": {
+      "title": "Seçilmiş hədiyyə qutuları",
+      "subtitle": "Xüsusi anlar üçün seçilmiş kolleksiyalar",
+      "forHer": {
+        "title": "Onun üçün",
+        "description": "Həyatınızdakı xüsusi qadınlar üçün mükəmməl zərif kolleksiyalar"
+      },
+      "birthday": {
+        "title": "Ad günü xüsusi",
+        "description": "Onların xüsusi gününü daha da unudulmaz edin"
+      },
+      "holiday": {
+        "title": "Bayram kolleksiyası",
+        "description": "Bayram mövsümü üçün bayram qutuları"
+      },
+      "cta": "İndi al →"
+    },
+    "whyChoose": {
+      "title": "Niyə Giftarium?",
+      "subtitle": "Düşüncəli hədiyyə vermənin sehrini yaşayın",
+      "delivery": {
+        "title": "Sürətli çatdırılma",
+        "description": "Sürətli və etibarlı çatdırılma"
+      },
+      "personalized": {
+        "title": "Fərdiləşdirilmiş",
+        "description": "Hər qutu unikaldır"
+      },
+      "quality": {
+        "title": "Premium keyfiyyət",
+        "description": "Diqqətlə seçilmiş məhsullar"
+      },
+      "perfect": {
+        "title": "Mükəmməl hədiyyələr",
+        "description": "Hər tədbir üçün"
+      }
+    }
+  },
+  "checkout": {
+    "title": "Şəxsi məlumatlar",
+    "description": "Zəhmət olmasa əlaqə məlumatlarınızı təqdim edin. Ödəniş təsdiqi üçün sizinlə WhatsApp vasitəsilə əlaqə saxlayacağıq.",
+    "fullName": "Ad Soyad",
+    "email": "E-poçt",
+    "phone": "Telefon nömrəsi (WhatsApp)",
+    "phoneHint": "Zəhmət olmasa aktiv WhatsApp-ı olan telefon nömrəsi təqdim edin. Ödəniş üçün sizinlə WhatsApp vasitəsilə əlaqə saxlayacağıq.",
+    "address": "Ünvan",
+    "placeType": "Yer növü",
+    "placeTypeOptions": {
+      "select": "Yer növünü seçin (istəyə bağlı)",
+      "apartment": "Mənzil",
+      "house": "Ev",
+      "office": "Ofis",
+      "other": "Digər"
+    },
+    "submitOrder": "Sifarişi təqdim et",
+    "submitting": "Sifariş təqdim olunur...",
+    "afterSubmit": "Təqdim etdikdən sonra ödənişi tamamlamaq üçün sizinlə WhatsApp vasitəsilə əlaqə saxlayacağıq.",
+    "loading": "Yüklənir...",
+    "success": {
+      "title": "Sifariş qəbul edildi!",
+      "description": "Sifarişiniz uğurla yerləşdirildi. Ödəniş təfərrüatlarını təsdiqləmək üçün tezliklə sizinlə WhatsApp vasitəsilə əlaqə saxlayacağıq.",
+      "paymentReceived": "Ödənişiniz qəbul edildi və sifarişiniz işlənir.",
+      "loading": "Sifariş təfərrüatları yüklənir...",
+      "whatsappPayment": {
+        "title": "WhatsApp ödənişi",
+        "description": "Zəhmət olmasa WhatsApp hesabınızı aktiv saxlayın. Komandamız təqdim etdiyiniz telefon nömrəsi ilə əlaqə saxlayaraq ödəniş prosesini tamamlayacaq."
+      },
+      "orderSummary": {
+        "title": "Sifariş xülasəsi",
+        "orderId": "Sifariş ID",
+        "totalAmount": "Ümumi məbləğ",
+        "paymentStatus": "Ödəniş statusu",
+        "paymentStatuses": {
+          "pending": "GÖZLƏMƏDƏ",
+          "paid": "ÖDƏNİB",
+          "failed": "UĞURSUZ",
+          "cancelled": "LƏĞV EDİLİB",
+          "refunded": "GERİ QAYTARILIB"
+        }
+      },
+      "whatsappContact": "Ödənişi tamamlamaq üçün tezliklə sizinlə WhatsApp vasitəsilə əlaqə saxlayacağıq.",
+      "emailConfirmation": "Ödənişinizi işləyirik. Tezliklə təsdiq e-poçtu alacaqsınız.",
+      "whatsappContactDetails": "Komandamız təqdim etdiyiniz telefon nömrəsi ilə WhatsApp vasitəsilə əlaqə saxlayaraq ödənişi tamamlayacaq və sifariş təfərrüatlarınızı təsdiqləyəcək.",
+      "whatHappensNext": {
+        "title": "Bundan sonra nə olacaq?",
+        "step1": "Bir neçə dəqiqə ərzində sizə WhatsApp mesajı göndərəcəyik",
+        "step2": "Ödəniş təlimatları və sifariş təsdiqi alacaqsınız",
+        "step3": "Ödəniş təsdiqlənəndən sonra sifarişinizi hazırlamağa başlayacağıq"
+      },
+      "emailShipping": "Sifarişiniz göndərilməyə hazır olduqda sizə e-poçt təsdiqi göndərəcəyik.",
+      "viewOrderDetails": "Sifariş təfərrüatlarına bax",
+      "continueShopping": "Alış-verişə davam et"
+    }
+  },
+  "premadeBoxes": {
+    "title": "Hazır hədiyyə qutuları",
+    "description": "Hər tədbir üçün hazırlanmış hədiyyə qutularımızın seçilmiş kolleksiyasına baxın."
+  },
+  "auth": {
+    "signIn": "Daxil ol",
+    "createAccount": "Hesab yarat",
+    "loading": "Yüklənir..."
+  },
+  "footer": {
+    "description": "Fərdiləşdirilmiş hədiyyə qutuları üçün bir yer.",
+    "shop": "Mağaza",
+    "account": "Hesab",
+    "support": "Dəstək"
+  },
+  "customBox": {
+    "title": "Fərdi qutunuzu yaradın",
+    "steps": {
+      "products": "Məhsullar",
+      "postcard": "Açıqca",
+      "boxType": "Qutu növü"
+    },
+    "selectProducts": {
+      "title": "Məhsulları seçin",
+      "description": "Fərdi hədiyyə qutunuz üçün məhsulları seçin. Qutu ölçüsünü sonunda seçəcəksiniz."
+    },
+    "yourBox": {
+      "title": "Sizin qutunuz",
+      "empty": "Qutunuza məhsul əlavə edin!",
+      "remove": "Sil",
+      "removeConfirm": "{name} qutunuzdan silinsin?",
+      "total": "Cəmi:",
+      "postcardQuestion": "Şəxsi açıqca mesajı əlavə etmək istəyirsiniz?",
+      "yesAddPostcard": "Bəli, Açıqca əlavə et",
+      "noSkip": "Xeyr, keç",
+      "clearBox": "Qutunu təmizlə",
+      "changeBox": "Qutunu dəyiş",
+      "proceedToCheckout": "Ödənişə keç"
+    },
+    "postcard": {
+      "title": "Şəxsi açıqca əlavə edin (İstəyə bağlı)",
+      "description": "Hədiyyə qutunuzla birlikdə daxil ediləcək şəxsi mesaj yazın. Bu istəyə bağlıdır - bu addımı atlaya bilərsiniz.",
+      "label": "Sizin mesajınız",
+      "placeholder": "Şəxsi mesajınızı buraya yazın...",
+      "characters": "{count}/500 simvol",
+      "skip": "Açıqcanı atla",
+      "save": "Saxla və ödənişə keç",
+      "tip": "Şəxsi mesaj əlavə etmək hədiyyənizi daha da xüsusi edir!",
+      "back": "← Məhsullara qayıt"
+    },
+    "boxType": {
+      "title": "Qutu növünü seçin",
+      "description": "{count} məhsul{plural} üçün mükəmməl qutu ölçüsünü seçin. Hər qutunun maksimum tutumu var.",
+      "recommendation": {
+        "title": "✨ Giftarium-ın sizin üçün seçməsinə icazə verin",
+        "recommends": "Tövsiyə edirik: {name} (Tutum: {capacity} məhsul)",
+        "chooseRecommended": "Tövsiyə olunanı seç",
+        "selected": "Seçildi"
+      },
+      "back": "← Açıqcaya qayıt",
+      "size": "Ölçü",
+      "price": "Qiymət",
+      "capacity": "Tutum",
+      "item": "məhsul",
+      "items": "məhsul",
+      "tooSmall": "Çox kiçik",
+      "perfectFit": "Mükəmməl uyğunluq",
+      "recommended": "Tövsiyə olunur",
+      "selectBox": "Qutu seç",
+      "selected": "Seçildi"
+    }
+  },
+  "mysteryBox": {
+    "title": "Sirr hədiyyə qutusu",
+    "description": "Hədiyyəni alan haqqında bizə məlumat verin və biz onun üçün xüsusi bir sürpriz hədiyyə qutusu yaradaq.",
+    "form": {
+      "recipientGender": "Alıcının cinsiyyəti",
+      "recipientAge": "Alıcının yaşı",
+      "budget": "Büdcə (AZN)",
+      "occasion": "Tədbir (istəyə bağlı)",
+      "interests": "Maraqlar (hamısını seçin)",
+      "additionalComments": "Əlavə şərhlər (istəyə bağlı)",
+      "placeholder": "Xüsusi istəklər və ya üstünlüklər...",
+      "customOccasionPlaceholder": "Tədbirinizi daxil edin...",
+      "submit": "Sirr qutusu yarat",
+      "submitting": "Sirr qutusu yaradılır...",
+      "genders": {
+        "male": "Kişi",
+        "female": "Qadın",
+        "other": "Digər"
+      },
+      "occasionsList": {
+        "birthday": "Ad günü",
+        "anniversary": "İldönümü",
+        "valentines": "Sevgililər günü",
+        "wedding": "Toy",
+        "graduation": "Məzuniyyət",
+        "newBaby": "Yeni körpə",
+        "thankYou": "Təşəkkür",
+        "getWell": "Sağalma",
+        "congratulations": "Təbrik",
+        "christmas": "Milad",
+        "justBecause": "Sadəcə",
+        "custom": "Başqa tədbir"
+      },
+      "interestsList": {
+        "sports": "İdman",
+        "music": "Musiqi",
+        "reading": "Oxuma",
+        "gaming": "Oyun",
+        "art": "İncəsənət",
+        "technology": "Texnologiya",
+        "fashion": "Moda",
+        "cooking": "Yemək bişirmə",
+        "travel": "Səyahət",
+        "movies": "Filmlər",
+        "photography": "Fotoqrafiya",
+        "fitness": "Fitnes"
+      }
+    }
+  },
+  "contact": {
+    "title": "Bizimlə əlaqə",
+    "description": "Sualınız və ya köməyə ehtiyacınız var? Biz sizə kömək etmək üçün buradayıq. Bizə mesaj göndərin və mümkün qədər tez sizə cavab verəcəyik.",
+    "form": {
+      "title": "Bizə mesaj göndərin",
+      "name": "Ad",
+      "email": "E-poçt",
+      "category": "Kateqoriya",
+      "subject": "Mövzu",
+      "orderId": "Sifariş ID / Sifariş kodu",
+      "message": "Mesaj",
+      "agreeToContact": "Bu sorğu ilə bağlı e-poçt vasitəsilə mənimlə əlaqə saxlanılmasına razıyam",
+      "send": "Mesaj göndər",
+      "sending": "Göndərilir...",
+      "prefilled": "Hesabınızdan avtomatik doldurulub",
+      "optionalRecommended": "İstəyə bağlı, lakin tövsiyə olunur",
+      "optionalOrder": "İstəyə bağlı - mesajınız konkret sifarişlə bağlıdırsa daxil edin",
+      "messagePlaceholder": "Zəhmət olmasa sorğunuz haqqında məlumat verin (minimum 20 simvol)",
+      "subjectPlaceholder": "Sorğunuzun qısa təsviri",
+      "orderIdPlaceholder": "Sorğunuz konkret sifarişlə bağlıdırsa",
+      "characters": "{count} / 5000 simvol",
+      "validation": {
+        "nameRequired": "Ad tələb olunur",
+        "nameMinLength": "Ad ən azı 2 simvol olmalıdır",
+        "nameMaxLength": "Ad 100 simvoldan az olmalıdır",
+        "emailRequired": "E-poçt tələb olunur",
+        "emailInvalid": "Zəhmət olmasa düzgün e-poçt ünvanı daxil edin",
+        "subjectMaxLength": "Mövzu 200 simvoldan az olmalıdır",
+        "messageRequired": "Mesaj tələb olunur",
+        "messageMinLength": "Mesaj ən azı 20 simvol olmalıdır",
+        "messageMaxLength": "Mesaj 5000 simvoldan az olmalıdır"
+      },
+      "categories": {
+        "website": "Veb sayt problemi",
+        "order": "Sifariş problemi",
+        "boxRequest": "Qutu sorğusu / İdeya",
+        "payment": "Ödəniş",
+        "delivery": "Çatdırılma",
+        "other": "Digər"
+      }
+    },
+    "success": {
+      "title": "Təşəkkür edirik!",
+      "message": "Mesajınız alındı — WhatsApp vasitəsilə sizə cavab verəcəyik.",
+      "sendAnother": "Başqa mesaj göndər"
+    }
+  },
+  "products": {
+    "search": {
+      "placeholder": "Məhsulları ad və ya təsvirə görə axtarın...",
+      "button": "Axtar"
+    },
+    "filters": {
+      "title": "Filtrlar",
+      "category": "Kateqoriya",
+      "allCategories": "Bütün kateqoriyalar",
+      "categories": {
+        "toys": "Oyuncaqlar",
+        "accessories": "Aksesuarlar",
+        "cosmetics": "Kosmetika",
+        "sweets": "Şirniyyat",
+        "hygiene": "Gigiyena",
+        "other": "Digər"
+      }
+    }
+  }
+}
+
